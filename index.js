@@ -6,6 +6,12 @@ const app = express();
 // Serve static files from the React app
 app.use(express.static(path.join(__dirname, 'client/build')));
 
+app.get('/api/test', (req,res) => {
+    const thing = 5;
+
+    res.json(thing);
+})
+
 // The "catchall" handler: for any request that doesn't
 // match one above, send back React's index.html file.
 app.get('*', (req, res) => {
