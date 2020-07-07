@@ -4,7 +4,7 @@ import './App.css';
 
 function App() {
 
-  getNumber = () => {
+  const getNumber = () => {
     // Get the passwords and store them in state
     fetch('/api/test')
       .then(res => res.json())
